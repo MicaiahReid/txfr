@@ -1,0 +1,27 @@
+[project]
+name = 'txfr'
+description = ''
+authors = []
+telemetry = false
+cache_dir = './.cache'
+
+
+[[project.requirements]]
+contract_id = 'SPBNMD07T0WD2WJAH6JZJG07GYSF0X413V69J3T9.Ponzy-STACKS'
+[contracts.txfr]
+path = 'contracts/txfr.clar'
+clarity_version = 2
+epoch = 2.4
+
+[repl]
+clarity_wasm_mode = false
+show_timings = false
+
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
